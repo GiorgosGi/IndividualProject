@@ -14,33 +14,33 @@ namespace IndividualProject.BusinessLogic
         {
             if(subjects == null) subjects = new List<string>() { "C#", "Java", "Python", "JavaScript", "PHP" };
             Trainer trainer = new Trainer();
-            trainer.FirstName = AskDetail("Give me your first name");
-            trainer.LastName  = AskDetail("Give me your last name");
-            trainer.Subject   = AskDetail("Give me the subject you teach", subjects);
+            trainer.FirstName = AskDetail("Give trainer's first name");
+            trainer.LastName  = AskDetail("Give trainer's name");
+            trainer.Subject   = AskDetail("Give the subject the trainer teaches", subjects);
             return (trainer);
         }
 
         public Course GetCourseDetails(List<string> streams = null, List<string> types = null, List<string> titles = null)
         {
-            if (titles == null) titles = new List<string>() { "CB10", "CB11", "CB12" };
+            if (titles == null) titles = new List<string>() { "CB12" };
             if (streams == null) streams = new List<string>() { "C#", "Java" };
             if (types == null) types = new List<string>() { "Full time", "Part time" };
             Course course = new Course();
             course.Title = AskDetail("Name of course", titles);
             course.Stream = AskDetail("Stream of course", streams);
             course.Type = AskDetail("Type of course", types);
-            course.Start_Date = AskDetail("Start date of the course");
-            course.End_Date = AskDetail("End date of the course");
+            course.Start_Date = DateTime.Parse(AskDetail("Start date of the course"));
+            course.End_Date = DateTime.Parse(AskDetail("End date of the course"));
             return (course);
         }
 
         public Student GetStudentDetails(List<string> subjects = null)
         {
             Student student = new Student();
-            student.FirstName = AskDetail("Give me your first name");
-            student.LastName = AskDetail("Give me your last name");
-            student.DateOfBirth = AskDetail("Give me your date of birth");
-            student.TuitionFees = AskDetail("What are your tuition fees?");
+            student.FirstName = AskDetail("Give student's first name");
+            student.LastName = AskDetail("Give student's last name");
+            student.DateOfBirth = DateTime.Parse(AskDetail("Give student't date of birth"));
+            student.TuitionFees = double.Parse(AskDetail("Give student's tuition fees?"));
             return (student);
         }
 
@@ -49,9 +49,9 @@ namespace IndividualProject.BusinessLogic
             Assignment assignment = new Assignment();
             assignment.Title = AskDetail("Assignment title");
             assignment.Description = AskDetail("Assignment description");
-            assignment.SubdateTime = AskDetail("Submission date");
-            assignment.OralMark = AskDetail("Oral mark");
-            assignment.TotalMark = AskDetail("Total mark");
+            assignment.SubdateTime = DateTime.Parse(AskDetail("Submission date"));
+            assignment.OralMark = float.Parse(AskDetail("Oral mark"));
+            assignment.TotalMark = float.Parse(AskDetail("Total mark"));
             return (assignment);
         }
 
@@ -81,10 +81,10 @@ namespace IndividualProject.BusinessLogic
                 Console.WriteLine($"{counter++}. {item}");
             }
             int choice = Convert.ToInt32(Console.ReadLine());
-            if (choice != elements.Count)
+            int numOfElements = elements.Count;
+            if (0 <= choice && choice > numOfElements)
             {
                 Console.WriteLine("Please select from the given list!!!");
-                
             }
             else
             {

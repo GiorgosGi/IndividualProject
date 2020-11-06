@@ -35,7 +35,7 @@ namespace IndividualProject.Models
         public float OralMark
         {
             get { return (this._oralmark); }
-            set { this._oralmark = value.; }
+            set { this._oralmark = value; }
         }
 
         public float TotalMark
