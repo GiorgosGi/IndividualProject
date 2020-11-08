@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IndividualProject.Models
 {
-    class Student
+    class Student : Course
     {
         private string   _firstname;
         private string   _lastname;

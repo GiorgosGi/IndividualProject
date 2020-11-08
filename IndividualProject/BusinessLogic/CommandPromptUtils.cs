@@ -12,10 +12,10 @@ namespace IndividualProject.BusinessLogic
     {
         public Trainer GetTrainerDetails(List<string> subjects = null)
         {
-            if(subjects == null) subjects = new List<string>() { "C#", "Java", "Python", "JavaScript", "PHP" };
+            if(subjects == null) subjects = new List<string>() { "C#", "Java", "Python", "JavaScript" };
             Trainer trainer = new Trainer();
             trainer.FirstName = AskDetail("Give trainer's first name");
-            trainer.LastName  = AskDetail("Give trainer's name");
+            trainer.LastName  = AskDetail("Give trainer's last name");
             trainer.Subject   = AskDetail("Give the subject the trainer teaches", subjects);
             return (trainer);
         }
