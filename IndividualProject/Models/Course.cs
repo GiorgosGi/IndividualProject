@@ -48,5 +48,18 @@ namespace IndividualProject.Models
         {
             return ($"Title: {_title}\tStream: {_stream}\tType: {_type}\tStart Date: {_start_date}\tEnd Date: {_end_date} "); 
         }
+
+        public Course()
+        {
+            
+        }
+
+        public Course(string Stream, string Type)
+        {
+            
+        }
+
+        
+        
     }
 }

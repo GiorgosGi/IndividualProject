@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IndividualProject.Models
 {
-    class Trainer
+    class Trainer : Course
     {
         private string _firstname;
         private string _lastname;
@@ -44,6 +44,8 @@ namespace IndividualProject.Models
         {
             return ($"First Name: {_firstname}\tLast Name: {_lastname}\tSubject: {_subject}");
         }
+
+        
 
        
     }

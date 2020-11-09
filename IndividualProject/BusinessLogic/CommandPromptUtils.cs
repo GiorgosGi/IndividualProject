@@ -25,6 +25,8 @@ namespace IndividualProject.BusinessLogic
             if (titles == null) titles = new List<string>() { "CB12" };
             if (streams == null) streams = new List<string>() { "C#", "Java" };
             if (types == null) types = new List<string>() { "Full time", "Part time" };
+            //if (startDate == null) startDate = new List<DateTime>() { Convert.ToDateTime(1-1-2020) };
+            //if (endDate == null) endDate = new List<DateTime>() { Convert.ToDateTime(31-3-2020) };
             Course course = new Course();
             course.Title = AskDetail("Name of course", titles);
             course.Stream = AskDetail("Stream of course", streams);

@@ -15,10 +15,10 @@ namespace IndividualProject
         {
             CommandPromptUtils cpUtils = new CommandPromptUtils();
 
-            List<Trainer> trainers =       new List<Trainer>();
-            List<Course> courses =         new List<Course>();
-            List<Student> students =       new List<Student>();
-            List<Assignment> assignments = new List<Assignment>();
+            List<Trainer> trainers         = new List<Trainer>();
+            List<Course> courses           = new List<Course>();
+            List<Student> students         = new List<Student>();
+            List<Assignment> assignments   = new List<Assignment>();
 
 
 
@@ -91,7 +91,6 @@ namespace IndividualProject
         }
 
        
-        // Create appropriate methods in order to ask 
-        // from the user data for the four main classes
+        
     }
 }

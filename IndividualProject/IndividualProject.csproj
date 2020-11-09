@@ -44,7 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogic\CommandPromptUtils.cs" />
+    <Compile Include="BusinessLogic\StudentsPerCourse.cs" />
     <Compile Include="Models\Assignment.cs" />
+    <Compile Include="Models\Classrooms.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Trainer.cs" />
