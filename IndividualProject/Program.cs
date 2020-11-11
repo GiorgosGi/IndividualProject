@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using IndividualProject.Models;
 using IndividualProject.BusinessLogic;
 using System.Linq.Expressions;
+using System.Net.Http;
 
 namespace IndividualProject
 {
@@ -21,7 +22,8 @@ namespace IndividualProject
             List<Assignment> assignments   = new List<Assignment>();
 
 
-
+            
+            
             try
             {
                 Console.WriteLine("How many trainers the school has?");
@@ -33,13 +35,10 @@ namespace IndividualProject
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                 Console.WriteLine(e.Message);
             }
-            
             cpUtils.PrintTrainersList(trainers);
             Console.WriteLine();
-
-
 
             try
             {
@@ -89,6 +88,27 @@ namespace IndividualProject
             cpUtils.PrintAssignmentsList(assignments);
             Console.WriteLine();
         }
+
+        // Try to move all the "try-catch" into a method but doesn't work
+        //public void callQuestions(string msg, List<Task> inputValues, CommandPromptUtils promptUtils)
+        //{
+            
+        //    try
+        //    {
+        //        Console.WriteLine("msg");
+        //        int tr = int.Parse(Console.ReadLine());
+        //        for (int i = 1; i <= tr; i++)
+        //        {
+        //            inputValues.Add(promptUtils.GetTrainerDetails);
+        //        }
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        Console.WriteLine(e.Message);
+        //    }
+        //    promptUtils.PrintTrainersList(inputValues);
+        //    Console.WriteLine();
+        //}
 
        
         

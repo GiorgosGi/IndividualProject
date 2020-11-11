@@ -1,0 +1,20 @@
+﻿courses
+	students
+	trainers
+	assignments
+
+students
+	trainers
+	assignments
+
+trainers
+	students
+	assignments
+
+
+
+-Pos na sisxetiso tis klaseis kai tis listes pou exo, metaksi tous?
+-Pos na ksero pios mathitis arxika parakolouthei pio course (dilonetai stin arxi?)
+-Pos na eisago tixaia dedomena?
+-pos na rotaei stoixeia apo tin arxi, an valei lathos epilogi?
+-datetime
