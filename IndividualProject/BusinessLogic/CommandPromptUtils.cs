@@ -10,6 +10,7 @@ namespace IndividualProject.BusinessLogic
 {
     class CommandPromptUtils
     {
+
         public Trainer GetTrainerDetails(List<string> subjects = null)
         {
             if(subjects == null) subjects = new List<string>() { "C#", "Java", "Python", "JavaScript" };
@@ -95,11 +96,14 @@ namespace IndividualProject.BusinessLogic
             return (result);
         }
 
+
+       
+
         public void PrintTrainersList(List<Trainer> trainers)
         {
             foreach (var item in trainers)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(item + "\n");
             }
         }
 

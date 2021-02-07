@@ -8,6 +8,7 @@ namespace IndividualProject.Models
 {
     class Classrooms : Student
     {
+
         public Classrooms(string CB12, string stream, string type)
         {
 

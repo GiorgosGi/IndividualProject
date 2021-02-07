@@ -14,6 +14,7 @@ namespace IndividualProject.BusinessLogic
             Console.WriteLine($"The students in {StudentsPerClass()}");
         }
 
+
         public Course StudentsPerClass(List<Student> students = null)
         {
             Course course1 = new Course();
