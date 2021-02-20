@@ -8,6 +8,13 @@ namespace IndividualProject.Models
 {
     class Classrooms : Student
     {
+        private string _className;
+
+        public string ClassName  
+        {
+            get { return (this._className); }
+            set { this._className = value; }
+        }
 
         public Classrooms(string CB12, string stream, string type)
         {
