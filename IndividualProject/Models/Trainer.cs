@@ -6,22 +6,35 @@ using System.Threading.Tasks;
 
 namespace IndividualProject.Models
 {
-    class Trainer : Course
+    class Trainer
     {
-        private string _firstname;
+        private string _firstname; //{ get; set; } // _name it for us so we now that this variables are private
         private string _lastname;
         private string _subject;
 
-        public string FirstName 
-        { 
-            get { return (this._firstname); } 
-            set { this._firstname = value.ToUpper(); } 
+        public Trainer()
+        {
+
         }
 
-        public string LastName
+        public Trainer(string FirstName,string LastName, string Subject)
         {
-            get { return (this._lastname);  }
-            set { this._lastname = value.ToUpper(); }
+            this._firstname = FirstName;
+            this._lastname = LastName;
+            this._subject = Subject;
+        }
+
+        public string FirstName
+        {                                     
+           get { return (this._firstname); } 
+           set { this._firstname = value; } 
+        }
+
+       
+        public string LastName 
+        { 
+            get { return (this._firstname); }          
+            set { this._lastname = value; }
         }
 
         public string Subject
@@ -30,23 +43,9 @@ namespace IndividualProject.Models
             set { this._subject = value; }
         }
 
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
-
         public override string ToString()
         {
             return ($"First Name: {_firstname}\tLast Name: {_lastname}\tSubject: {_subject}");
         }
-
-        
-
-       
     }
 }

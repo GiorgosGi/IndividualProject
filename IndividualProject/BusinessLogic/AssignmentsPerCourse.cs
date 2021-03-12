@@ -7,27 +7,27 @@ using System.Threading.Tasks;
 
 namespace IndividualProject.BusinessLogic
 {
-    class StudentsPerCourse
+    class AssignmentsPerCourse
     {
         
         protected internal static List<string> stream = new List<string>() { "C#", "Java", "Python", "JavaScript", "PHP" };
         protected internal static List<string> type = new List<string>() { "Full Time", "Part Time", "Online", "Hybrid Full Time", "Hybrid Part Time" };
 
-        protected internal void ListPerStudentPerCourse()
+
+        protected internal void ListOfAssignmentsPerCourse()
         {
-            PrintList(MakeListStudentPerCourse(SelectFromListOfSrings(stream), SelectFromListOfSrings(type)));
+            PrintList(MakeListAssignmentPerCourse(SelectFromListOfSrings(stream), SelectFromListOfSrings(type)));
         }
 
-        protected internal List<Student> MakeListStudentPerCourse(string stream, string type)
+        protected internal List<Assignment> MakeListAssignmentPerCourse(string stream, string type)
         {
 
-            List<Student> studentsPerCourse = List.students.FindAll(student => student.StudentStream == stream && student.StreamType == type);
-            return (studentsPerCourse);
+            List<Assignment> assignmentPerCourse = List.assignments.FindAll(assignment => assignment.AssignmentStream == stream && assignment.AssignmentType == type);
+
+            return (assignmentPerCourse);
         }
 
-        
-
-        protected internal static void PrintList(List<Student> list)
+        protected internal static void PrintList(List<Assignment> list)
         {
             foreach (var item in list)
             {
@@ -35,8 +35,8 @@ namespace IndividualProject.BusinessLogic
             }
         }
 
-        protected internal string SelectFromListOfSrings (List<string> element) //--> maybe i can make it so i use it from utils
-        {            
+        protected internal string SelectFromListOfSrings(List<string> element)
+        {
             string result = "";
             int counter = 1;
             foreach (var item in element)
@@ -49,8 +49,9 @@ namespace IndividualProject.BusinessLogic
                 Console.WriteLine("Enter Correct Selection: ");
                 choice = Int32.Parse(Console.ReadLine());
             }
-            result = element.ElementAt(choice - 1);            
+            result = element.ElementAt(choice - 1);
             return (result);
         }
+
     }
 }

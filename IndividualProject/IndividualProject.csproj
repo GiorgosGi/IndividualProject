@@ -43,10 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogic\AssignmentsPerCourse.cs" />
     <Compile Include="BusinessLogic\CommandPromptUtils.cs" />
+    <Compile Include="BusinessLogic\ConsoleMenu.cs" />
+    <Compile Include="BusinessLogic\FindAssignmentsDue.cs" />
+    <Compile Include="BusinessLogic\List.cs" />
+    <Compile Include="BusinessLogic\StudentsInMoreCourses.cs" />
     <Compile Include="BusinessLogic\StudentsPerCourse.cs" />
+    <Compile Include="BusinessLogic\StudentsWithAssignments.cs" />
+    <Compile Include="BusinessLogic\TrainersPerCourse.cs" />
     <Compile Include="Models\Assignment.cs" />
-    <Compile Include="Models\Classrooms.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Trainer.cs" />
@@ -55,10 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Documentation\Individual_Project_Part_A-examples.txt" />
-    <Content Include="Documentation\ProblemsToSolve.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
