@@ -99,7 +99,6 @@ namespace IndividualProject.BusinessLogic
             }
 
         }
-
         protected internal static void InputDataMenu()
         {
             Console.WriteLine("Choose Action: ");
