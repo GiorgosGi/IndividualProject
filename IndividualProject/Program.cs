@@ -14,7 +14,6 @@ namespace IndividualProject
         static void Main(string[] args)
         {
             ConsoleMenu.Menu();
-
         }
         
     }
