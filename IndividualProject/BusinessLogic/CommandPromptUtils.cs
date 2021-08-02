@@ -154,6 +154,5 @@ namespace IndividualProject.BusinessLogic
                 Console.WriteLine(item);
             }
         }
-
     }
 }
