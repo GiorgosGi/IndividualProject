@@ -18,7 +18,6 @@ namespace IndividualProject.Models
 
         public Assignment()
         {
-
         }
 
         public Assignment(string AssignmentStream, string AssignmentType, string Title, string Description, DateTime SubDateTime, float OralMark, float TotalMark)
@@ -32,9 +31,7 @@ namespace IndividualProject.Models
             this._totalmark = TotalMark;
         }
 
-        
 
-        
         public string AssignmentType
         {
             get { return (this._assignmentType); }
