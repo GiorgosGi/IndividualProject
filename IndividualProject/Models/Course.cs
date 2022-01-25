@@ -15,7 +15,6 @@ namespace IndividualProject.Models
         private DateTime _end_date;
         public Course()
         {
-
         }
         public Course(int TitleNumber, string Stream, string Type, DateTime Start_Date, DateTime End_Date)
         {
