@@ -23,7 +23,6 @@ namespace IndividualProject.Models
             this._type = Type;
             this._start_date = Start_Date;
             this._end_date = End_Date;
-
         }
 
         public int TitleNumber
